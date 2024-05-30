@@ -1,0 +1,25 @@
+@startuml
+interface GeometrikSekil {
+    + getAlan(): double
+    + getCevre(): double
+}
+
+class Cember {
+    - yaricap: double
+    + Cember(yaricap: double)
+    + getAlan(): double
+    + getCevre(): double
+}
+
+class Dikdortgen {
+    - uzunluk: double
+    - genislik: double
+    + Dikdortgen(uzunluk: double, genislik: double)
+    + getAlan(): double
+    + getCevre(): double
+}
+
+GeometrikSekil <|.. Cember
+GeometrikSekil <|.. Dikdortgen
+
+@enduml
